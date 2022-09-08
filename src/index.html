@@ -21,7 +21,7 @@
   </head>
 
   <body>
-    <form action="" id="loginForm">
+    <form action="" id="paymentform">
       <div class="card m-4">
         <div class="card-header">
           <h3>Payment form example</h3>
@@ -36,7 +36,8 @@
                 id="ccn"
                 placeholder="xxxx-xxxx-xxxx-xxxx"
               />
-              <small class="invalid-feedback" id="cardFeedback"></small>
+              <small class="invalid-feedback" id="ccnNegativeFeedback"></small>
+              <small class="valid-feedback" id="ccnPositiveFeedback"></small>
             </div>
             <div class="col-md-3">
               <label for="cvc" class="form-label">CVC #</label>
@@ -46,7 +47,8 @@
                 id="cvc"
                 placeholder="0000"
               />
-              <small class="invalid-feedback" id="cvcFeedback"></small>
+              <small class="invalid-feedback" id="cvcNegativeFeedback"></small>
+              <small class="valid-feedback" id="cvcPositiveFeedback"></small>
             </div>
             <div class="col-md-4">
               <label for="amount" class="form-label">Amount</label>
@@ -58,7 +60,14 @@
                   class="form-control"
                   aria-label="Amount (to the nearest dollar)"
                 />
-                <small class="invalid-feedback" id="amountFeedback"></small>
+                <small
+                  class="invalid-feedback"
+                  id="amountNegativeFeedback"
+                ></small>
+                <small
+                  class="valid-feedback"
+                  id="amountPositiveFeedback"
+                ></small>
               </div>
             </div>
           </div>
@@ -66,19 +75,34 @@
             <div class="col-md-6">
               <label for="firstname" class="form-label">First Name</label>
               <input type="text" class="form-control" id="firstname" />
-              <small class="invalid-feedback" id="firstnameFeedback"></small>
+              <small
+                class="invalid-feedback"
+                id="firstnameNegativeFeedback"
+              ></small>
+              <small
+                class="valid-feedback"
+                id="firstnamePositiveFeedback"
+              ></small>
             </div>
             <div class="col-md-6">
               <label for="lastname" class="form-label">Last Name</label>
               <input type="text" class="form-control" id="lastname" />
-              <small class="invalid-feedback" id="lastnameFeedback"></small>
+              <small
+                class="invalid-feedback"
+                id="lastnameNegativeFeedback"
+              ></small>
+              <small
+                class="valid-feedback"
+                id="lastnamePositiveFeedback"
+              ></small>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
               <label for="city" class="form-label">City</label>
               <input type="text" class="form-control" id="city" />
-              <small class="invalid-feedback" id="cityFeedback"></small>
+              <small class="invalid-feedback" id="cityNegativeFeedback"></small>
+              <small class="valid-feedback" id="cityPositiveFeedback"></small>
             </div>
             <div class="col-md-3">
               <label for="state" class="form-label">State</label>
@@ -140,12 +164,17 @@
                 <option value="WI">Wisconsin</option>
                 <option value="WY">Wyoming</option>
               </select>
-              <small class="invalid-feedback" id="stateFeedback"></small>
+              <small
+                class="invalid-feedback"
+                id="stateNegativeFeedback"
+              ></small>
+              <small class="valid-feedback" id="statePositiveFeedback"></small>
             </div>
             <div class="col-md-3">
               <label for="zip" class="form-label">Postal Code</label>
               <input type="number" class="form-control" id="zip" />
-              <small class="invalid-feedback" id="zipFeedback"></small>
+              <small class="invalid-feedback" id="zipNegativeFeedback"></small>
+              <small class="valid-feedback" id="zipPositiveFeedback"></small>
             </div>
           </div>
           <div class="row my-3 d-flex justify-content-between">
@@ -209,6 +238,14 @@
                 <div id="emailHelp" class="form-text">
                   Add any notes here.
                 </div>
+                <small
+                  class="invalid-feedback"
+                  id="messageNegativeFeedback"
+                ></small>
+                <small
+                  class="valid-feedback"
+                  id="messagePositiveFeedback"
+                ></small>
               </div>
             </div>
           </div>
